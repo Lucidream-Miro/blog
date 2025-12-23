@@ -57,7 +57,7 @@ html {
 }
 
 .app-container {
-  @apply px-5 sm:px-10 2xl:px-12;
+  @apply px-6 sm:px-12 2xl:px-12;
 }
 
 #mobile-menu.mobile-nav-open {
