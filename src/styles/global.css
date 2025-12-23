@@ -39,7 +39,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Pretendard", sans-serif;
+  --font-sans: "AritaBuri", serif;
   --font-mono: "RobotoMono", monospace;
 
 	--color-foreground: #0c0c0c;
@@ -57,7 +57,7 @@ html {
 }
 
 .app-container {
-  @apply px-6 sm:px-12 2xl:px-12;
+  @apply px-6 sm:px-12 2xl:px-16;
 }
 
 #mobile-menu.mobile-nav-open {
