@@ -1,3 +1,9 @@
+---
+title: 'Linear Algebra Chapter V: Scalar Products and Orthogonality'
+description: 'Personal study of linear algebra with Serge Lang textbook.'
+pubDate: 'Dec 23, 2025'
+---
+
 ## Theme 1. Scalar Product <small>(스칼라 내적)</small>
 
 고등까지의 벡터 연산에서 내적은 '앞에 있는 것끼리 곱하고 뒤에 있는 것끼리 곱해서 더하는' 단순한 연산이었다. 하지만 Serge Lang의 책에서는 내적의 일반화된 개념을 다룬다. 이제부터의 내적은, 둘 이상의 벡터를 입력받아 스칼라를 내놓는 사상<small>mapping</small>중 하나이다. 즉, 쌍선형성<small>bilinearity</small>을 가지는 선형사상이다. 아래의 조건을 만족하는 특수한 사상들을 가리킨다. 당연히 지금까지 다루었던 내적도 '점곱'<small>dot product</small> 또는 표준 내적<small>standard product</small>이라는 이름으로 포함된다.
