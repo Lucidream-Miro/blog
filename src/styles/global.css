@@ -39,7 +39,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "AritaBuri", serif;
+  --font-sans: "Pretendard", sans-serif;
   --font-mono: "RobotoMono", monospace;
 
 	--color-foreground: #0c0c0c;
@@ -57,7 +57,7 @@ html {
 }
 
 .app-container {
-  @apply px-5 sm:px-10 2xl:px-12;  /* 기존 px-6 sm:px-12 2xl:px-16 → 줄임 */
+  @apply px-5 sm:px-10 2xl:px-12;
 }
 
 #mobile-menu.mobile-nav-open {
