@@ -51,6 +51,7 @@
 }
 
 html {
+  font-size: 14px;
 	scroll-padding-top: 6.5rem;
 	scroll-behavior: smooth;
 }
@@ -83,8 +84,6 @@ html {
 .prose iframe {
 	@apply my-16 mx-auto w-11/12 aspect-video rounded-xl;
 }
-
-
 
 /* 인라인 수식만 일반 텍스트와 맞추고 싶을 때 (선택) */
 .prose .katex {
