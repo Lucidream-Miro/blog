@@ -57,7 +57,7 @@ html {
 }
 
 .app-container {
-	@apply container mx-auto px-6 sm:px-12 2xl:px-16;
+  @apply px-5 sm:px-10 2xl:px-12;  /* 기존 px-6 sm:px-12 2xl:px-16 → 줄임 */
 }
 
 #mobile-menu.mobile-nav-open {
@@ -73,7 +73,7 @@ html {
 }
 
 .section-title {
-	@apply text-4xl font-semibold pb-3;
+	@apply text-3xl font-semibold pb-3;
 }
 
 .posts-grid-container {
@@ -92,6 +92,6 @@ html {
 
 .prose small {
   color: rgb(107 114 128);
-  font-style: normal; /* 이탤릭 추가로 더 구분되게 */
+  font-style: normal;
   font-weight: 400;
 }
