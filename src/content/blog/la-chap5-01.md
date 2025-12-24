@@ -1,5 +1,5 @@
 ---
-title: 'Linear Algebra Chapter V: Scalar Products and Orthogonality'
+title: 'Linear Algebra Chapter V-01: Scalar Products'
 description: 'Personal study of linear algebra with Serge Lang textbook.'
 pubDate: 'Dec 23, 2025'
 ---
@@ -38,4 +38,4 @@ $$ \langle f, g \rangle = \int^1_0 f(t) g(t) dt $$
 
 ### #4. 직교공간
 
-직교는 스칼라 내적을 통해 정의된다. 우리가 점곱을 배울 당시 $a \cdot b = |a||b| \cos \theta$로 배웠던 것을 기억할 것이다. 
+직교는 스칼라 내적을 통해 정의된다. 처음 벡터의 내적(점곱)을 배울 당시 $a \cdot b = |a||b| \cos \theta$로 배웠다.
