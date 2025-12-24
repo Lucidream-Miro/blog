@@ -18,17 +18,17 @@ Host: Ubuntu 24.04 Native Mini PC
 
 IMG: Joshua Riek's Ubuntu 24.04 Server
 
-# 1. 이미지 준비 및 마운트
+## 1. 이미지 준비 및 마운트
 
 윈도우에서는 너무도 많은 시행착오를 겪어서, 리눅스 환경으로 옮겨갔다. 가장 큰 문제는 이미지를 eMMC에 다운로드해도, usb로 네트워크를 열어주는 gadget 설정이 자동으로 되지 않는다는 것. 무슨 뜻이냐면 micro HDMI 케이블로 연결해서 키보드를 사용하는 게 아니라면 기기를 제어할 방법이 없다는 것이다. 그래서 인터넷을 뒤지다가 Github 코멘트에서 발견한 솔루션이, 이미지가 담겨있는 마이크로 SD에서 내부 파티션의 네트워크 설정을 건드려서, 기본으로 와이파이에 접속되게끔 하는 것이었다.
 
-## 1) 이미지 다운로드: 
+### 1) 이미지 다운로드: 
 
 `ubuntu-24.04-preinstalled-server-arm64-radxa-zero-3w.img.xz`
 
-## 2) 압축 해제
+### 2) 압축 해제
 
-## 3) 루프백 장치 연결.
+### 3) 루프백 장치 연결.
 
 ```
 sudo losetup -fP --show [image.img]
@@ -36,7 +36,7 @@ sudo losetup -fP --show [image.img]
 
 이때 내가 삽입한 부팅 드라이브는 `/dev/loop13`으로 잡혔다.
 
-## 4) Rootfs 파티션 마운트
+### 4) Rootfs 파티션 마운트
 
 `p1`(Boot)이 아니라 `p2`(Root Filesystem)을 마운트해야 `/etc`에 접근이 가능했다.
 
@@ -44,11 +44,11 @@ sudo losetup -fP --show [image.img]
 sudo mount /dev/loop13p2 /mnt/server_root
 ```
 
-# 2. 와이파이 강제 설정 (Netplan 주입)
+## 2. 와이파이 강제 설정 (Netplan 주입)
 
 불안정한 초기 설정 스크립트 대신, OS의 네트워크 데몬(Netplan)에 직접 설정을 박아넣었음
 
-## 1) 설정 파일 만들기 
+### 1) 설정 파일 만들기 
 
 (참고로 나는 에디터로 micro를 사용한다..)
 
@@ -68,9 +68,9 @@ sudo micro /mnt/server_root/etc/netplan/99-wifi.yaml
               password: "비밀번호"
 ```
 
-## 2) 마운트 해제. `umount`를 사용한다.
+### 2) 마운트 해제. `umount`를 사용한다.
 
-# 3. eMMC 플래싱
+## 3. eMMC 플래싱
 
 기존 데이터 충돌을 막기 위해 **Loader 주입 -> 초기화 -> 굽기**의 정석 루트를 탔다.
 
@@ -96,7 +96,7 @@ sudo rkdeveloptool wl 0 [수정된_이미지.img]
     
 5. **재부팅:** `sudo rkdeveloptool rd`
 
-# 4. 얻은 교훈..
+## 4. 얻은 교훈..
 
 1. Windows vs Linux
 - Windows는 GUI가 있어 편하지만, 리눅스 파티션(ext4) 내부를 수정해서 굽는 과정이 불가능했다.
