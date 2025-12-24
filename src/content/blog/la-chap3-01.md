@@ -1,5 +1,5 @@
 ---
-title: 'Linear Algebra Chapter III: Linear Mappins'
+title: 'Linear Algebra Chapter III: Linear Mappings'
 description: 'Personal study of linear algebra with Serge Lang textbook.'
 pubDate: 'Dec 23, 2025'
 ---

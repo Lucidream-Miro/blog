@@ -1,7 +1,7 @@
 ---
-title: 'Serge Lang Linear Algebra 따라가기 Chapter V(1): Scalar Products'
+title: 'Linear Algebra Chapter V: Scalar Products and Orthogonality'
 description: 'Personal study of linear algebra with Serge Lang textbook.'
-pubDate: 'Dec 23, 2025'
+pubDate: 'Dec 24, 2025'
 ---
 
 ## Theme 1. Scalar Product <small>(스칼라 내적)</small>
