@@ -81,6 +81,8 @@ sudo micro /mnt/server_root/etc/netplan/99-wifi.yaml
 ```
 sudo rkdeveloptool db rk356x_spl_loader_ddr1056_v1.12.111.bin
 ```
+
+이때 `rk356x_spl_loader_ddr1056_v1.12.111.bi`라는 파일이 필요하다. 공식 홈페이지에 있다.
     
 3. **eMMC 완전 초기화 (Wipe):**
 
