@@ -4,6 +4,10 @@ description: 'Personal study of linear algebra with Serge Lang textbook.'
 pubDate: 'Dec 24, 2025'
 ---
 
+<br>
+<br>
+<br>
+
 ## Theme 1. Scalar Product <small>(스칼라 내적)</small>
 
 고등까지의 벡터 연산에서 내적을 떠올려보면 다음과 같다. 점 $A(a_1, a_2)$와 점 $B(b_1,b_2)$가 있을 때,

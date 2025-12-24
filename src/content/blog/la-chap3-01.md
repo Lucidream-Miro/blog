@@ -4,6 +4,10 @@ description: 'Personal study of linear algebra with Serge Lang textbook.'
 pubDate: 'Dec 23, 2025'
 ---
 
+<br>
+<br>
+<br>
+
 ## Theme 1. Mappings
 
 ### 1. Mapping(사상)
