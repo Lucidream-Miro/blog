@@ -10,6 +10,7 @@ import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 import { remarkModifiedTime } from './src/plugins/remark-modified-time.mjs'
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeCallouts from 'rehype-callouts';
 
 
 // https://astro.build/config
