@@ -11,21 +11,28 @@ const posts = (await getCollection('blog'))
 ---
 
 <BaseLayout>
+	<!-- Hero 섹션: 모바일에서 크기/여백 대폭 줄임 -->
 	<main
-		class="app-container flex flex-col gap-12 justify-center py-36 md:py-48 pt-44 md:pt-56 relative"
+		class="app-container flex flex-col gap-8 justify-center py-20 md:py-32 lg:py-36 pt-32 md:pt-44 lg:pt-56 relative"
 	>
+		<!-- py-36 md:py-48 pt-44 md:pt-56 → 모바일 py-20/pt-32로 줄임 -->
 		<div>
-			<p class="block text-3xl opacity-70 mt-9 mb-4">Welcome to</p>
-			<h1 class="text-8xl font-bold leading-none">Miro</h1>
+			<p class="block text-xl sm:text-2xl lg:text-3xl opacity-70 mt-6 mb-4">Welcome to</p>
+			<!-- text-3xl → text-xl sm:text-2xl lg:text-3xl -->
+			<h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-none">
+				Miro
+			</h1>
+			<!-- text-8xl → text-5xl부터 점점 커지게 (모바일 60px 내외) -->
 		</div>
-		<p class="text-2xl max-w-2xl font-light leading-normal">
+		<p class="text-lg sm:text-xl lg:text-2xl max-w-2xl font-light leading-normal">
 			A blog about math, physics, music, and more.
 		</p>
-		<div class="flex flex-wrap gap-8">
+		<div class="flex flex-wrap gap-6 text-lg sm:text-xl">
+			<!-- gap-8 → gap-6, text-xl → text-lg sm:text-xl -->
 			{
 				SocialLinks.map((link) => (
 					<a
-						class="text-xl text-primary dark:text-primary-dark underline hover:underline underline-offset-4"
+						class="text-primary dark:text-primary-dark underline hover:underline underline-offset-4"
 						href={link.url}
 						target="_blank"
 					>
@@ -37,46 +44,47 @@ const posts = (await getCollection('blog'))
 	</main>
 
 	<!-- Recent Posts Section -->
-	<section class="app-container">
-		<h2 class="section-title">Recent Posts</h2>
-		<div class="posts-grid-container">
+	<section class="app-container py-12 md:py-20">
+		<h2 class="section-title text-2xl sm:text-3xl">Recent Posts</h2>
+		<!-- 제목도 모바일에서 작게 -->
+		<div class="posts-grid-container gap-4 md:gap-6">
 			{posts.map((post) => <BlogCard post={post} />)}
 		</div>
-		<a class="btn-secondary" href={`${SITE_BASE}/blog`}
+		<a class="btn-secondary text-base sm:text-lg" href={`${SITE_BASE}/blog`}
 			>Read All
-			<Icon size={20} name="mdi:arrow-right" />
+			<Icon size={18} name="mdi:arrow-right" />
 		</a>
 	</section>
 
-	<!-- Recent Posts Section -->
-	<section class="app-container py-42 grid lg:grid-cols-2 gap-28 lg:gap-10">
+	<!-- About & Contact Section -->
+	<section class="app-container py-20 md:py-32 grid lg:grid-cols-2 gap-12 lg:gap-20">
+		<!-- py-42 → py-20 md:py-32, gap-28 → gap-12 lg:gap-20 -->
 		<div class="space-y-6">
-			<h2 class="section-title">About Me</h2>
-			<p class="text-lg max-w-xl pb-4">
+			<h2 class="section-title text-2xl sm:text-3xl">About Me</h2>
+			<p class="text-base sm:text-lg max-w-xl pb-4">
 				A student majoring in mechanical engineering who is interested in math, physics, AI, music, and more.
 			</p>
-			<a class="btn-secondary" href={`${SITE_BASE}/about`}
+			<a class="btn-secondary text-base sm:text-lg" href={`${SITE_BASE}/about`}
 				>Go to About
-				<Icon size={20} name="mdi:arrow-right" />
+				<Icon size={18} name="mdi:arrow-right" />
 			</a>
 		</div>
 		<div class="space-y-6">
-			<h2 class="section-title">Get in touch</h2>
-			<p class="text-lg max-w-xl">
+			<h2 class="section-title text-2xl sm:text-3xl">Get in touch</h2>
+			<p class="text-base sm:text-lg max-w-xl">
 				Use the buttons below for my resume & email.
 			</p>
-			<div class="flex flex-wrap mt-auto space-x-4">
+			<div class="flex flex-wrap gap-4">
 				<a
-					class="btn-primary"
+					class="btn-primary text-base sm:text-lg"
 					href="mailto:example@email.com"
-					download
 					target="_blank"
 					>Get in touch
-					<Icon height={20} name="mdi:email" />
+					<Icon height={18} name="mdi:email" />
 				</a>
-				<a class="btn-secondary" href="https://example.com" target="_blank"
+				<a class="btn-secondary text-base sm:text-lg" href="https://example.com" target="_blank"
 					>Download Resume
-					<Icon height={20} name="mdi:arrow-collapse-down" />
+					<Icon height={18} name="mdi:arrow-collapse-down" />
 				</a>
 			</div>
 		</div>
