@@ -39,7 +39,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "AritaBuri", serif;
+  --font-sans: "Pretendard", sans-serif;
   --font-mono: "RobotoMono", monospace;
 
 	--color-foreground: #0c0c0c;
