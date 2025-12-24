@@ -95,3 +95,38 @@ html {
   font-style: normal; /* 이탤릭 추가로 더 구분되게 */
   font-weight: 400;
 }
+
+/* 모바일 우선 텍스트/라인 높이 최적화 */
+body {
+  @apply text-base leading-relaxed; /* 16px 텍스트, 여유로운 줄 간격 */
+}
+
+/* 모바일에서만 더 컴팩트하게 */
+@media (max-width: 640px) {
+  body {
+    @apply text-sm; /* 모바일 본문 14px 정도로 */
+  }
+
+  /* 네비바나 푸터 패딩도 줄이기 (Navbar/Footer 컴포넌트에 따라 다름) */
+  .app-container {
+    @apply px-3;
+  }
+}
+
+/* 태블릿 이상에서 점점 여유롭게 */
+@media (min-width: 640px) {
+  body {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    @apply text-lg;
+  }
+}
+
+/* AritaBuri 세리프가 무겁게 느껴지지 않게 약간 가볍게 */
+.font-light {
+  font-weight: 300;
+}
