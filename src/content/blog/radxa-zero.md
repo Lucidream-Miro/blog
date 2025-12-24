@@ -4,6 +4,10 @@ description: '생각보다 보드가 더 작아서 놀랐다'
 pubDate: 'Dec 24, 2025'
 ---
 
+<br>
+<br>
+<br>
+
 알리에서 7만원 이상 구매 시 1만원 할인 쿠폰 증정. 평소에 써보고 싶었던 radxa zero 3w가 눈에 밟혔다. 바로 구매. 최종적으로 4GB 램에 32GB eMMC 내장 옵션을 구매했다. 처음에는 no eMMC로 가보려 했는데, 그러면 1만원이 아니라 4,900원 할인밖에 못 쓴다. 그래서 곧바로 환불하고 최적의 옵션으로 가보았다. 방열판까지 챙겨서. 
 
 배송은 오래 걸리지 않았다. 한 일주일 정도만에 왔다. 현지 업체에서 공항으로 이동할 때가 가장 오래 걸렸고, 그 이후로는 일사천리로 진행됐다.
@@ -11,6 +15,7 @@ pubDate: 'Dec 24, 2025'
 이후 세팅을 시작했다. Linux 공부해보려는 욕심이 있어서, server 버전 이미지들을 준비했다. 무수한 삽질이 있었으나... 성공했던 방법만 남겨야겠다.
 
 Host: Ubuntu 24.04 Native Mini PC
+
 IMG: Joshua Riek's Ubuntu 24.04 Server
 
 # 1. 이미지 준비 및 마운트
@@ -19,7 +24,8 @@ IMG: Joshua Riek's Ubuntu 24.04 Server
 
 ## 1) 이미지 다운로드: 
 
-``ubuntu-24.04-preinstalled-server-arm64-radxa-zero-3w.img.xz``
+`ubuntu-24.04-preinstalled-server-arm64-radxa-zero-3w.img.xz`
+
 ## 2) 압축 해제
 
 ## 3) 루프백 장치 연결.
@@ -28,11 +34,11 @@ IMG: Joshua Riek's Ubuntu 24.04 Server
 sudo losetup -fP --show [image.img]
 ```
 
-이때 내가 삽입한 부팅 드라이브는 ``/dev/loop13``으로 잡혔다.
+이때 내가 삽입한 부팅 드라이브는 `/dev/loop13`으로 잡혔다.
 
 ## 4) Rootfs 파티션 마운트
 
-``p1``(Boot)이 아니라 ``p2``(Root Filesystem)을 마운트해야 ``/etc``에 접근이 가능했다.
+`p1`(Boot)이 아니라 `p2`(Root Filesystem)을 마운트해야 `/etc`에 접근이 가능했다.
 
 ```
 sudo mount /dev/loop13p2 /mnt/server_root
@@ -62,7 +68,7 @@ sudo micro /mnt/server_root/etc/netplan/99-wifi.yaml
               password: "비밀번호"
 ```
 
-## 2) 마운트 해제. ``umount``를 사용한다.
+## 2) 마운트 해제. `umount`를 사용한다.
 
 # 3. eMMC 플래싱
 
@@ -88,7 +94,7 @@ sudo rkdeveloptool ef
 sudo rkdeveloptool wl 0 [수정된_이미지.img]
 ```
     
-5. **재부팅:** ``sudo rkdeveloptool rd``
+5. **재부팅:** `sudo rkdeveloptool rd`
 
 # 4. 얻은 교훈..
 
