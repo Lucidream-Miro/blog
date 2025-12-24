@@ -53,10 +53,10 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 				</div>
 				<div class="grow w-full md:max-w-[75ch]">
 					<div>
-						<h1 class="text-4xl sm:text-5xl leading-snug pt-12 font-bold">
+						<h1 class="text-3xl sm:text-4xl lg:text-5xl leading-snug pt-8 md:pt-12 font-bold">
 							{title}
 						</h1>
-						<div class="text-lg flex items-center gap-4 flex-wrap py-8">
+						<div class="text-lg flex items-center gap-4 flex-wrap py-6">
 							<!-- Publish date -->
 							<span>
 								<Icon
@@ -107,7 +107,7 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 						}
 					</div>
 					<div
-						class="prose prose-neutral prose-lg md:prose-xl dark:prose-invert prose-img:rounded-xl prose-figure:text-center prose-img:mx-auto"
+						class="prose prose-neutral prose-base sm:prose-lg md:prose-xl dark:prose-invert prose-img:rounded-xl prose-figure:text-center prose-img:mx-auto"
 					>
 						<slot />
 					</div>
