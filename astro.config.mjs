@@ -31,6 +31,10 @@ export default defineConfig({
 	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime, remarkModifiedTime, remarkMath],
-		rehypePlugins: [rehypeFigureTitle, rehypeAccessibleEmojis, rehypeKatex],
+		rehypePlugins: [rehypeFigureTitle, rehypeAccessibleEmojis, rehypeKatex, [rehypeCallouts, { 
+        theme: 'obsidian',
+        // customClassNames: ['not-prose']  // prose와 충돌 안 하게 (필요시)
+      }],
+],
 	},
 })
