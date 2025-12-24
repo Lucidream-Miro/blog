@@ -1,12 +1,15 @@
 ---
-title: 'Linear Algebra Chapter V-01: Scalar Products'
+title: 'Serge Lang Linear Algebra 따라가기 Chapter V(1): Scalar Products'
 description: 'Personal study of linear algebra with Serge Lang textbook.'
 pubDate: 'Dec 23, 2025'
 ---
 
 ## Theme 1. Scalar Product <small>(스칼라 내적)</small>
 
-고등까지의 벡터 연산에서 내적은 '앞에 있는 것끼리 곱하고 뒤에 있는 것끼리 곱해서 더하는' 단순한 연산이었다. 하지만 Serge Lang의 책에서는 내적의 일반화된 개념을 다룬다. 이제부터의 내적은, 둘 이상의 벡터를 입력받아 스칼라를 내놓는 사상<small>mapping</small>중 하나이다. 즉, 쌍선형성<small>bilinearity</small>을 가지는 선형사상이다. 아래의 조건을 만족하는 특수한 사상들을 가리킨다. 당연히 지금까지 다루었던 내적도 '점곱'<small>dot product</small> 또는 표준 내적<small>standard product</small>이라는 이름으로 포함된다.
+고등까지의 벡터 연산에서 내적을 떠올려보면 다음과 같다. 점 $A(a_1, a_2)$와 점 $B(b_1,b_2)$가 있을 때,
+$$\overrightarrow{OA}\cdot \overrightarrow{OB}=a_1b_1+a_2b_2.$$
+
+하지만 Serge Lang의 책에서는 내적의 일반화된 개념을 다룬다. 이제부터의 내적은, 둘 이상의 벡터를 입력받아 스칼라를 내놓는 사상<small>mapping</small>중 하나이다. 당연히 지금까지 다루었던 내적도 '점곱'<small>dot product</small> 또는 표준 내적<small>standard product</small>이라는 이름으로 포함된다.
 
 ### 1. 스칼라 내적의 조건
 
@@ -20,11 +23,11 @@ pubDate: 'Dec 23, 2025'
 2. $a \cdot (b + c) = a \cdot b + a \cdot c$
 3. $(xa) \cdot b = a \cdot (xb) = x(a \cdot b)$
 
-이렇게 표준 내적 $\cdot$에 대해서도 당연히 스칼라 내적의 성질을 찾을 수 있다.
+이렇게 표준 내적 $\cdot$에 대해서도 당연히 스칼라 내적의 성질을 찾아볼 수 있다.
 
 ### 2. 비퇴화(비축퇴)<small>non-degenerate</small>
 
-양자역학에서 중요하다고 알고 있다. $v \in V$이고 모든 $w \in V$에 대해 $\langle v, w \rangle = O \implies v = O$이면 내적이 비퇴화되었다고 한다.
+$v \in V$이고 모든 $w \in V$에 대해 $\langle v, w \rangle = O \implies v = O$이면 내적이 비퇴화되었다고 한다.
 
 ### 3. 함수공간에서 스칼라 내적
 
@@ -38,5 +41,5 @@ $$ \langle f, g \rangle = \int^1_0 f(t) g(t) dt $$
 
 ### 4. 직교공간
 
-직교는 스칼라 내적을 통해 정의된다. 처음 점곱을 배울 당시 $a \cdot b = |a||b| \cos \theta$로 배웠던 것을 기억할 것이다. 이때 두 벡터 사이의 각도가 $90\degree$가 되면 내적의 결과는 $0$이 되는 것을 통해 벡터의 직교를 보였는데, 스칼라 내적도 동일하다. 직교는 스칼라 내적의 값이 $0$이 되는 상황을 말한다. 이를 수식으로는 다음과 같이 표현한다. $$\text{When }v, w \in V, \langle v, w \rangle =0 \implies v \perp w$$
-직교공간이란 벡터공간에서 이렇게 서로 직교인 벡터들끼리 모아둔 부분공간이다. 즉, $S \subseteq V$일 때 $S^\perp$는 $w \in S$인 모든 $w$에 대하여 $\langle w, v \rangle=0$을 만족하는 $v \in V$의 집합으로 볼 수 있다. 
+직교는 스칼라 내적을 통해 정의된다. 처음 벡터의 내적(점곱)을 배울 당시 $a \cdot b = |a||b| \cos \theta$로 배웠다. 이때 두 벡터 사이의 각도가 $90\degree$가 되면 내적의 결과는 $0$이 되는 것을 통해 벡터의 직교를 보였는데, 스칼라 내적도 동일하다. 직교는 스칼라 내적의 값이 $0$이 되는 상황을 말한다. 이를 수식으로는 다음과 같이 표현한다. $$\text{When }v, w \in V, \langle v, w \rangle =0 \implies v \perp w$$
+직교공간이란 벡터공간에서 이렇게 서로 직교인 벡터들끼리 모아둔 부분공간이다. 즉, $S \subseteq V$일 때, $S$에 대한 직교공간 $S^\perp$는 $w \in S$인 모든 $w$에 대하여 $\langle w, v \rangle=0$을 만족하는 $v \in V$의 집합으로 볼 수 있다. 
