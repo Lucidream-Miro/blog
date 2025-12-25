@@ -1,7 +1,7 @@
 ---
 title: 'Linear Algebra Chapter III: Linear Mappings'
-description: 'Personal study of linear algebra with Serge Lang textbook.'
-pubDate: 'Dec 23, 2025'
+description: 'Raw notes of personal study of linear algebra with Serge Lang textbook.'
+pubDate: 'Dec 24, 2025'
 ---
 
 <br>
