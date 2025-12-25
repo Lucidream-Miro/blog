@@ -4,6 +4,10 @@ description: 'Raw notes of personal study of linear algebra with Serge Lang text
 pubDate: 'Dec 25, 2025'
 ---
 
+<br>
+<br>
+<br>
+
 ## Theme 1. Field, Vector Space, Vector
 
 ### 1. Field(체)
